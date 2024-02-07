@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Test
         run: |
-          curl -f -L --retry 5 https://wasmtime.dev/install.sh | bash -s -- --version dev
+          curl -f -L --retry 5 https://wasmtime.dev/install.sh | bash
           VERSION_OUTPUT="$(~/.wasmtime/bin/wasmtime --version)"
           echo $VERSION_OUTPUT
           WASMTIME_VERSION=$(echo $VERSION_OUTPUT | cut -d' ' -f2)
